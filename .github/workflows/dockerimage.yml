@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag andreireinus/aspnet_slowapp:$(date +%s)
+      run: docker build . --file Aspnet.SlowApp/Dockerfile --tag andreireinus/aspnet_slowapp:$(date +%s)
       working-directory: src
       
     - name: Build & Push to Docker Hub
